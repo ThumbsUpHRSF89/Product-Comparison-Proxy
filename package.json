@@ -4,6 +4,7 @@
   "description": "Proxy for project Hackazon",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/ThumbsUpHRSF89/product-comparison-proxy/issues"
   },
-  "homepage": "https://github.com/ThumbsUpHRSF89/product-comparison-proxy#readme"
+  "homepage": "https://github.com/ThumbsUpHRSF89/product-comparison-proxy#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "react": "^16.2.0",
+    "reactdom": "^2.0.0"
+  }
 }

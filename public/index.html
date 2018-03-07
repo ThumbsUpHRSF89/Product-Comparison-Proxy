@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <title>FECDemo</title>
+  </head>
+  <body>
+    <div id="itemDetail"></div>
+    <div id="relatedProduct"></div>
+    <div id="productComparison"></div>
+    <div id="reviewSection"></div>
+    <script src="lib/react.development.js"></script>
+    <script src="lib/react-dom.development.js"></script>
+    <!-- Ivy's bundle -->
+    <script src="http://localhost:8001/bundle.js"></script>
+    <!-- Marlin's bundle -->
+    <script src="http://localhost:8002/product/:id/bundle.js"></script>
+    <!-- Henry's bundle -->
+    <!-- <script src="http://localhost:8003/app.js"></script> -->
+    <!-- Placeholder for hanyu's bundle -->
+    <!-- <script src="http://localhost:8004/app.js"></script> -->
+    <script>
+      // Hanyu's component
+      // ReactDOM.render(
+      //   React.createElement(Hanyu's Component),
+      //   document.getElementById('itemDetail')
+      // );
+      // Ivy's component
+      ReactDOM.render(
+        React.createElement(RelatedProduct),
+        document.getElementById('relatedProduct')
+      );
+      // My component
+      // ReactDOM.render(
+      //   React.createElement(Comparison),
+      //   document.getElementById('productComparison')
+      // );
+      //Marlin's component
+      ReactDOM.render(
+        React.createElement(ReviewSection),
+        document.getElementById('reviewSection')
+      );
+    </script>
+  </body>
+</html>
