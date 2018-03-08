@@ -5,6 +5,8 @@ const port = process.env.PORT || 8000;
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use('/product/:id', express.static(path.join(__dirname, "public")))
+
 app.listen(port, () => {
   console.log(`Proxy server listening on http://localhost:${port}`);
 });

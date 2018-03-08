@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
-    <title>FECDemo</title>
+    <title>Hackazon Item Detail Page</title>
   </head>
   <body>
     <div id="itemDetail"></div>
@@ -17,7 +17,7 @@
     <!-- Marlin's bundle -->
     <script src="http://localhost:8002/product/:id/bundle.js"></script>
     <!-- Henry's bundle -->
-    <!-- <script src="http://localhost:8003/app.js"></script> -->
+    <script src="http://localhost:8003/product/:id/bundle.js"></script>
     <!-- Placeholder for hanyu's bundle -->
     <!-- <script src="http://localhost:8004/app.js"></script> -->
     <script>
@@ -32,15 +32,15 @@
         document.getElementById('relatedProduct')
       );
       // My component
-      // ReactDOM.render(
-      //   React.createElement(Comparison),
-      //   document.getElementById('productComparison')
-      // );
-      //Marlin's component
       ReactDOM.render(
-        React.createElement(ReviewSection),
-        document.getElementById('reviewSection')
+        React.createElement(App),
+        document.getElementById('productComparison')
       );
+      //Marlin's component
+      // ReactDOM.render(
+      //   React.createElement(ReviewSection),
+      //   document.getElementById('reviewSection')
+      // );
     </script>
   </body>
 </html>
