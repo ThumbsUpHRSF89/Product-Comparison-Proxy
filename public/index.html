@@ -19,13 +19,13 @@
     <!-- Henry's bundle -->
     <script src="http://localhost:8003/product/:id/bundle.js"></script>
     <!-- Placeholder for hanyu's bundle -->
-    <!-- <script src="http://localhost:8004/app.js"></script> -->
+    <script src="http://localhost:8004/bundle.js"></script>
     <script>
       // Hanyu's component
-      // ReactDOM.render(
-      //   React.createElement(Hanyu's Component),
-      //   document.getElementById('itemDetail')
-      // );
+      ReactDOM.render(
+        React.createElement(ItemDetails),
+        document.getElementById('itemDetail')
+      );
       // Ivy's component
       ReactDOM.render(
         React.createElement(RelatedProduct),
@@ -37,10 +37,10 @@
         document.getElementById('productComparison')
       );
       //Marlin's component
-      // ReactDOM.render(
-      //   React.createElement(ReviewSection),
-      //   document.getElementById('reviewSection')
-      // );
+      ReactDOM.render(
+        React.createElement(ReviewSection),
+        document.getElementById('reviewSection')
+      );
     </script>
   </body>
 </html>
