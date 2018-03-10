@@ -6,11 +6,15 @@ const request = require('request');
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/api/productComparison', (req, res) => {
-  // let microservices = {
-  //   'productComparison': 'http://localhost:8003/product/:id/bundle.js',
-  // }
-  request('http://localhost:8003/product/:id/bundle.js', (err, response, body) => {
+app.get('/api/:service', (req, res) => {
+  let microservices = {
+    'relatedProduct': 'http://localhost:8001/bundle.js',
+    'reviewSection': 'http://localhost:8002/bundle.js',
+    'productComparison': 'http://localhost:8003/product/:id/bundle.js',
+    'itemDetail': 'http://localhost:8004/bundle.js',
+  };
+
+  request(microservices[req.params.service], (err, response, body) => {
     if (err) {
       console.log('Microservice request error: ', err);
       res.send(err);
