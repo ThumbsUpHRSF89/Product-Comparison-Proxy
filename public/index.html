@@ -13,35 +13,39 @@
     <script src="lib/react.development.js"></script>
     <script src="lib/react-dom.development.js"></script>
     <!-- Ivy's bundle -->
-    <script src="http://localhost:8001/bundle.js"></script>
+    <!-- This is the absolute path. We moved to a relative path to hide access to the microservice -->
+    <!-- <script src="http://localhost:8001/bundle.js"></script> -->
+    <script src='/api/relatedProduct'></script>
     <!-- Marlin's bundle -->
-    <script src="http://localhost:8002/bundle.js"></script>
+    <!-- <script src="http://localhost:8002/bundle.js"></script> -->
+    <script src='/api/reviewSection'></script>
     <!-- Henry's bundle -->
     <!-- <script src="http://localhost:8003/product/:id/bundle.js"></script> -->
     <script src='/api/productComparison'></script>
     <!-- Placeholder for hanyu's bundle -->
-    <script src="http://localhost:8004/bundle.js"></script>
+    <!-- <script src="http://localhost:8004/bundle.js"></script> -->
+    <script src='/api/itemDetail'></script>
     <script>
       // Hanyu's component
-      // ReactDOM.render(
-      //   React.createElement(ItemDetails),
-      //   document.getElementById('itemDetail')
-      // );
+      ReactDOM.render(
+        React.createElement(ItemDetails),
+        document.getElementById('itemDetail')
+      );
       // Ivy's component
-      // ReactDOM.render(
-      //   React.createElement(RelatedProduct),
-      //   document.getElementById('relatedProduct')
-      // );
+      ReactDOM.render(
+        React.createElement(RelatedProduct),
+        document.getElementById('relatedProduct')
+      );
       // My component
       ReactDOM.render(
         React.createElement(App),
         document.getElementById('productComparison')
       );
-      //Marlin's component
-      // ReactDOM.render(
-      //   React.createElement(ReviewSection),
-      //   document.getElementById('reviewSection')
-      // );
+      // Marlin's component
+      ReactDOM.render(
+        React.createElement(ReviewSection),
+        document.getElementById('reviewSection')
+      );
     </script>
   </body>
 </html>
